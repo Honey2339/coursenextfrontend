@@ -6,7 +6,6 @@ import Loading from "./loading"
 import axios from "axios"
 import Cookies from "js-cookie"
 import { useRouter } from "next/navigation"
-import { AuthContext } from "../layout.jsx"
 
 function CourseCard({ setShowMsg }) {
   const [showCard, setShowCard] = useState(false)
@@ -14,7 +13,6 @@ function CourseCard({ setShowMsg }) {
   const [selectedCourse, setSelectedCourse] = useState(null)
   const [allCourses, setAllCourses] = useState([])
 
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
   const router = useRouter()
 
   useEffect(() => {
@@ -49,10 +47,7 @@ function CourseCard({ setShowMsg }) {
         console.log(err)
       }
     }
-    if (isLoggedIn) {
-      fetchUserCourse()
-    }
-  }, [isLoggedIn])
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => {

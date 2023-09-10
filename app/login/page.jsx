@@ -11,14 +11,12 @@ import { useRouter } from "next/navigation"
 import lock from "../images/lock.png"
 import "./login.css"
 import axios from "axios"
-import { useState, useContext } from "react"
+import { useState } from "react"
 import Cookies from "js-cookie"
-import { AuthContext } from "../layout.jsx"
 
 export default function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
   const router = useRouter()
 
   const handleSubmit = (e) => {
