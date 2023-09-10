@@ -104,14 +104,13 @@ function CourseCard({ setShowMsg }) {
                     <h1 className="font-meduim mt-9 text-lg text-gray-700">
                       {course.title}
                     </h1>
-                    <Typography
-                      variant="body1"
+                    <p
                       className="mt-2 mb-4 text-center"
                       sx={{ maxWidth: "250px" }}
                     >
                       {course.description}
-                    </Typography>
-                    {}
+                    </p>
+                    <p className="text-red-500">{course.price}</p>
                     {userCourse.some(
                       (userCourse) => userCourse.courseId === course.id
                     ) ? (
