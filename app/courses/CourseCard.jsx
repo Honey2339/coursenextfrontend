@@ -110,7 +110,7 @@ function CourseCard({ setShowMsg }) {
                     >
                       {course.description}
                     </p>
-                    <p className="text-red-500">{course.price}</p>
+                    <p className="text-red-500 mb-4">Rs:{course.price}</p>
                     {userCourse.some(
                       (userCourse) => userCourse.courseId === course.id
                     ) ? (

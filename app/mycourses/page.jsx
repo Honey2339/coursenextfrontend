@@ -62,19 +62,15 @@ function MyCourses() {
                 >
                   <CardContent className="p-0 bg-white flex flex-col items-center">
                     <img className="max-h-60" src={course.url} alt="Course" />
-                    <Typography
-                      variant="h1"
-                      className="font-meduim mt-9 text-lg text-gray-700"
-                    >
+                    <h1 className="font-meduim mt-9 text-lg text-gray-700">
                       {course.title}
-                    </Typography>
-                    <Typography
-                      variant="body1"
+                    </h1>
+                    <p
                       className="mt-2 mb-4 text-center"
                       sx={{ maxWidth: "250px" }}
                     >
                       {course.description}
-                    </Typography>
+                    </p>
                     <Button
                       variant="contained"
                       className="text-white font-meduim bg-purple-800 hover:bg-purple-600 hover:font-semibold"
