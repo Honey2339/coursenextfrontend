@@ -11,13 +11,14 @@ import { useRouter } from "next/navigation"
 import lock from "../images/lock.png"
 import "./login.css"
 import axios from "axios"
-import { useState } from "react"
+import { useState, useContext } from "react"
 import Cookies from "js-cookie"
+import { AuthContext } from "../layout.jsx"
 
 export default function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext)
   const router = useRouter()
 
   const handleSubmit = (e) => {
@@ -34,6 +35,7 @@ export default function Login() {
         Cookies.set("token", token, { expires: 0.1 })
         setUsername("")
         setPassword("")
+        setIsLoggedIn(true)
         setTimeout(() => {
           router.push("/courses")
         }, 1000)
