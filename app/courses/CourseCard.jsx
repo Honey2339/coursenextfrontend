@@ -101,12 +101,9 @@ function CourseCard({ setShowMsg }) {
                 >
                   <CardContent className="p-0 bg-white flex flex-col items-center">
                     <img className="max-h-60" src={course.url} alt="Course" />
-                    <Typography
-                      variant="h1"
-                      className="font-meduim mt-9 text-lg text-gray-700"
-                    >
+                    <h1 className="font-meduim mt-9 text-lg text-gray-700">
                       {course.title}
-                    </Typography>
+                    </h1>
                     <Typography
                       variant="body1"
                       className="mt-2 mb-4 text-center"
